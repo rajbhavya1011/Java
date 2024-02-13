@@ -3,11 +3,11 @@ class Array
 {
 public static void main(String args[])
 {
-  Scanner sc=new Scanner(System.in);
   int  n , m ,in,val,p;
-  int a[] = new int[n];
+  Scanner sc =new Scanner(System.in);
      System.out.println("Size of array to be entered");
      n=sc.nextInt();
+     int a[] = new int[n];
      System.out.println("enter the array");
      for (int i = 0; i < n; i++)
      {
@@ -27,7 +27,7 @@ public static void main(String args[])
       // traverse and search element in an aray //
       case 1:
       System.out.println("\nEnter no. to be searched\n");
-      val = sc.nextInt();
+      m = sc.nextInt();
      for (int i = 0; i < n; i++)
      {
        if (a[i] == m)
@@ -63,18 +63,22 @@ public static void main(String args[])
      break;
      case 4:
      // adding of an element in the array //
-     int a[] = new int[n+1];
+     int arr[] = new int[n+1];
+     for(int i=0;i<n+1;i++)
+     {
+      arr[i]=a[i];
+     }
      System.out.println("Enter index in which it needs to be entered");
      in=sc.nextInt();
      for (int i = n; i>in ; i--)
      {
-          a[i]=a[i-1];
+          arr[i]=arr[i-1];
      }
      System.out.println("Enter the element to be added");
-     a[in]=sc.nextInt();
+     arr[in]=sc.nextInt();
     for (int i = 0; i<n+1 ; i++)
     {
-     System.out.println(a[i]);
+     System.out.println(arr[i]);
     }
     break;
      // removing of the element
